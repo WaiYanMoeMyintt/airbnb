@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { IconType } from "react-icons";
 
@@ -18,9 +17,12 @@ const Button: React.FC<ButtonProps> = ({
   outline,
   small,
   icon,
+  onClick
 }) => {
   return (
     <button
+    onClick={onClick}
+    disabled = {disabled}
       className={`relative disabled:opacity-70 
      disabled:cursor-not-allowed rounded-lg hover:opacity-80 
      transition w-full

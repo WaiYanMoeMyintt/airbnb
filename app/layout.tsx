@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Modal from "./components/modal/Modal";
 const inter = Nunito({ subsets: ["latin"] });
+import RegisterModal from "./components/modal/RegisterModal";
 
 export const metadata: Metadata = {
   title: "Airbnb",
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Modal isOpen = {true}/>
+        {/* <Modal isOpen actionLabel="Submit" title=""/> */}
+        <RegisterModal />
         <Navbar />
         {children}
       </body>
